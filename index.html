@@ -5,8 +5,65 @@
         <title>JSON Sandbox</title>
     </head>
     <body>
+        <ul id= "people"></ul>
+
         <script>
-            
+            var person = {
+                name:"Tom",
+                age:"35",
+                address: {
+                    street: "5 main st",
+                    city: "Philly"
+                },
+                children: ["Petey", "BonBon"]
+            }
+
+            // person = JSON.stringify(person)
+            // person =JSON.parse(person);
+
+
+            var people = [
+                {name: "Jimmy",
+                age: 10
+            },
+                {name: "Suzy",
+                age: 10
+            },
+                {name: "Natalie",
+                age: 15
+            },
+            ]
+            // console.log(person.address.street);
+            console.log(person.children[1]);
+            // console.log(people[1].age);
+
+            var output ='';
+            for(var i = 0; i < people.length; i++){
+                // console.log(people[i].name);
+                output += '<li>'+people[i].name+'</li>'
+            }
+            document.getElementById('people').innerHTML = output;
+
+
+        //     var iceCream = [
+        //         {flavor: "chocolate",
+        //         stock: 7,
+        //         price: "3.99"
+        //     },
+        //         {flavor: "vanilla",
+        //         stock: 10,
+        //         price: "3.99"
+        //     },
+        //         {flavor: "rocky road",
+        //         stock: 3,
+        //         price:"4.25"            
+        //     }
+        // ]
+
+        // for(var i= 0; i < iceCream.length; i++){
+        //     console.log(iceCream[i].flavor)
+        //     console.log(iceCream[i].price)
+        // }
         </script>
     </body>
 </html>
